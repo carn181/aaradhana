@@ -67,7 +67,7 @@
             <property name="can-focus">True</property>
             <property name="wide-handle">True</property>
             <child>
-              <object class="GtkBox" id="search">
+              <object class="GtkBox">
                 <property name="name">search</property>
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
@@ -75,17 +75,24 @@
                 <property name="vexpand">True</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkSearchBar" id="searchbar">
+                  <object class="GtkSearchBar">
                     <property name="name">searchBar</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
+                    <property name="search-mode-enabled">True</property>
                     <child>
-                      <placeholder/>
+                      <object class="GtkSearchEntry" id="search">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="primary-icon-name">edit-find-symbolic</property>
+                        <property name="primary-icon-activatable">False</property>
+                        <property name="primary-icon-sensitive">False</property>
+                      </object>
                     </child>
                   </object>
                   <packing>
                     <property name="expand">False</property>
-                    <property name="fill">True</property>
+                    <property name="fill">False</property>
                     <property name="position">0</property>
                   </packing>
                 </child>
@@ -116,7 +123,7 @@
                 </child>
               </object>
               <packing>
-                <property name="resize">True</property>
+                <property name="resize">False</property>
                 <property name="shrink">True</property>
               </packing>
             </child>
